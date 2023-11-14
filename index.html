@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>This is Javasript</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+
+    <p id="dem">I am Learning Javascript</p>
+
+    <div id="me"></div>
+
+    <button type="button" onclick='document.getElementById("dem").innerHTML="I am determine to Learn Javascript"'>Click ME</button>
+
+    <button class="btn" type="button" onclick='document.getElementById("me").innerHTML="Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint rerum, soluta quod repudiandae voluptates architecto quas alias natus fuga odit vero dicta fugiat libero. Quam cum placeat quibusdam consequuntur accusamus!"'>Click for more</button>
+
+    <button onclick="document.getElementById('bb').src='images/bob.gif'">Turn image to red</button>
+
+    <img src="images/bob.gif" alt="" id="bb" width="100px" height="100px">
+
+    <button onclick="document.getElementById('bb').src='images/bob.gif'">Turn image to green</button>
+
+    <div id="lo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ratione magni fuga a aspernatur optio illum facilis minus placeat voluptatibus atque, animi dicta fugit et accusantium maiores harum, nesciunt deserunt possimus. Labore nostrum autem ex quam, doloremque eius? Assumenda ex vero deleniti facilis blanditiis et perspiciatis fuga. Rerum, dolorem aspernatur.</div>
+
+    <button class="love" onclick="myFunction()">Message for Josewils</button>
+
+    <p id="love">I Love you.</p>
+
+    <p id="ca"></p>
+
+    <button type="button" onclick="document.write('I Love Josewils')">Clear everything</button>
+    
+    <button type="button" onclick="alert('I want to kiss you passionately')">Kiss</button>
+
+    <button type="button" onclick="print()">Submit and Print</button>
+
+    <p id="cal"></p>
+
+    <script>
+        document.getElementById('demo').innerHTML="Hello Javascript"
+        
+        document.getElementById('lo').style.background="teal"
+        document.getElementById('lo').style.padding="20px"
+        document.getElementById('lo').style.color="white"
+        document.getElementById('lo').style.fontSize="20pt"
+
+        function myFunction(){
+        document.getElementById('love').innerHTML="I Love Josewils!";
+        }
+
+        document.getElementById("ca").innerHTML = 5 + 6;
+
+        document.write(5+10);
+
+        alert('Keep moving');
+
+        let a, b, c;
+        a = 5;
+        b = 11;
+        c = a + b;
+        document.getElementById("cal").innerHTML = c;
+
+
+       
+    </script>
+</body>
+</html>
