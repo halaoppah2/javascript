@@ -27,19 +27,65 @@
 
     <div id="lo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque ratione magni fuga a aspernatur optio illum facilis minus placeat voluptatibus atque, animi dicta fugit et accusantium maiores harum, nesciunt deserunt possimus. Labore nostrum autem ex quam, doloremque eius? Assumenda ex vero deleniti facilis blanditiis et perspiciatis fuga. Rerum, dolorem aspernatur.</div>
 
-    <button class="love" onclick="myFunction()">Message for Josewils</button>
+    <button class="love" onclick="myFunction()">Message for you</button>
 
     <p id="love">I Love you.</p>
 
     <p id="ca"></p>
 
-    <button type="button" onclick="document.write('I Love Josewils')">Clear everything</button>
+    <button type="button" onclick="document.write('I Love You')">Clear everything</button>
     
     <button type="button" onclick="alert('I want to kiss you passionately')">Kiss</button>
 
     <button type="button" onclick="print()">Submit and Print</button>
 
     <p id="cal"></p>
+
+    <p id="Bol"></p>
+
+    <p id="mult"></p>
+
+    <p id="car"></p>
+
+    <p id="car0"></p>
+
+    <p id="crush"></p>
+
+    <p id="time"></p>
+    <button type="button" id="but" onclick="document.getElementById('time').innerHTML = Date()">Click to see time</button>
+
+    <p id="time1"></p>
+    <button type="button" id="but" onclick="this.innerHTML = Date()">Click to see time</button>
+
+    <p id="time2"></p>
+    <button type="button" id="but" onclick="displayDate()">Click to see time</button>
+
+    <p id="length"></p>
+
+    <button onclick="myFunct()">Click to change to uppercase</button>
+    <p id="up">He is a Man!</p>
+
+    <p id="back"></p>
+
+    <p id="arr"></p>
+
+    <p id="arr1"></p>
+
+    <p id="close"></p>
+
+    <p id="close1"></p>
+
+    <p id="close2"></p>
+
+    <p id="yr"></p>
+
+    <input id="age" value="18">
+    <button onclick="myFunction()">Try it</button>
+    <p id="ag"></p>
+
+    <p id="greeting"></p>
+
+    <p id="day"></p>
 
     <script>
         document.getElementById('demo').innerHTML="Hello Javascript"
@@ -65,8 +111,116 @@
         c = a + b;
         document.getElementById("cal").innerHTML = c;
 
+        let x = 5;
+        let y = 5;
+        let z = 6;
+        document.getElementById("Bol").innerHTML = (x == y) + "<br>" + (z == y);
 
+        function myFunction(a, b){
+            return a * b;
+        }
+
+        let result = myFunction(3, 4);
+        document.getElementById('mult').innerHTML = result;
+
+        let car = "Rang Rover Evoque";
+        document.getElementById('car').innerHTML = car;
+
+        const car1 = {type:"Toyota", color:"White", model:"Camery"};
+        document.getElementById("car0").innerHTML = "The name of the car is " + car1.model;
+
+        const person = {
+            firstName:"Enoch",
+            lastName:"Oppah"
+        };
+        document.getElementById('crush').innerHTML = "I am crushing on " + person.firstName + " " + person.lastName;
+
+        document.getElementById('but').style.border = "none";
+        document.getElementById('but').style.outline = "none";
+        document.getElementById('but').style.background = "teal";
+        document.getElementById('but').style.color = "white";
+        document.getElementById('but').style.padding = "10px";
+
+        function displayDate(){
+            document.getElementById('time2').innerHTML = Date();
+        }
+
+        let le = "The boy, is good";
+        let le1 = le.length;
+        document.getElementById("length").innerHTML = "The total length is " + le1;
        
+        function myFunct(){
+        let u = document.getElementById('up').innerHTML;
+        document.getElementById('up').innerHTML = u.toUpperCase();
+        }
+
+        let bk = `He's often called "Oppah"`;
+        document.getElementById('back').innerHTML = bk;
+
+        const kar = ["Range", " Toyota", " Volvo"];
+        document.getElementById('arr').innerHTML = kar;
+
+        kar.sort();
+        document.getElementById('arr1').innerHTML = kar;
+
+        const d = new Date("December 31, 2023 11:13:00");
+        document.getElementById('close').innerHTML = "The closing date of the online appliaction is " + d.toDateString();
+
+        const D = new Date(2023, 11, 31, 12);
+        document.getElementById('close1').innerHTML = "The closing date of submission of form is " + D;
+
+        const Do = new Date(2023, 11, 31, 12);
+        document.getElementById('close2').innerHTML = "The closing date of paying of fess is " + Do.toUTCString();
+
+        const yrr = new Date();
+        document.getElementById('close2').innerHTML = + yrr.getFullYear();
+
+        function myFunction(){
+            let age = document.getElementById('age').value;
+            let vote = (age < 18) ? "You are not eligible to vote!":"You are good to go.";
+            document.getElementById('ag').innerHTML = vote;
+        }
+
+        const hour = new Date().getHours();
+        let greetings;
+        if (hour < 10){
+            greetings = "Good morning";
+        }else if (hour < 20){
+            greetings = "Good day";
+        }else{
+            greetings = "Good evening";
+        }
+        document.getElementById('greeting').innerHTML = greetings;
+
+        let day;
+        switch (new Date().getDay()){
+            case 0:
+                day = "Sunday";
+                break;
+            case 1:
+                day = "Monday";
+                break;
+            case 2:
+                day = "Tuesday";
+                break;
+            case 3:
+                day = "Wednesday";
+                break;
+            case 4:
+                day = "Thursday";
+                break;
+            case 5:
+                day = "Friday";
+                break;
+            case 6:
+                day = "Saturday";
+                break;
+        }
+        document.getElementById('day').innerHTML = "Today is " + day;
+            
+
+    
+
     </script>
 </body>
 </html>
