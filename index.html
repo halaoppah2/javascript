@@ -87,6 +87,15 @@
 
     <p id="day"></p>
 
+    <input id="tel">
+    <button onclick="myFunction()">Submit</button>
+    <p id="phone"></p>
+
+    <button onclick="this.style.display='none'">Click to remove me</button>
+
+    <h1 id="inter"></h1>
+    
+
     <script>
         document.getElementById('demo').innerHTML="Hello Javascript"
         
@@ -182,42 +191,68 @@
         }
 
         const hour = new Date().getHours();
-        let greetings;
-        if (hour < 10){
-            greetings = "Good morning";
-        }else if (hour < 20){
-            greetings = "Good day";
-        }else{
-            greetings = "Good evening";
-        }
-        document.getElementById('greeting').innerHTML = greetings;
+            let greetings;
+            if (hour < 10){
+                greetings = "Good morning";
+            }else if (hour < 15){
+                greetings = "Good day";
+            }else{
+                greetings = "Good evening";
+            }
+            document.getElementById('greeting').innerHTML = greetings;
 
         let day;
-        switch (new Date().getDay()){
-            case 0:
-                day = "Sunday";
-                break;
-            case 1:
-                day = "Monday";
-                break;
-            case 2:
-                day = "Tuesday";
-                break;
-            case 3:
-                day = "Wednesday";
-                break;
-            case 4:
-                day = "Thursday";
-                break;
-            case 5:
-                day = "Friday";
-                break;
-            case 6:
-                day = "Saturday";
-                break;
+            switch (new Date().getDay()){
+                case 0:
+                    day = "Sunday";
+                    break;
+                case 1:
+                    day = "Monday";
+                    break;
+                case 2:
+                    day = "Tuesday";
+                    break;
+                case 3:
+                    day = "Wednesday";
+                    break;
+                case 4:
+                    day = "Thursday";
+                    break;
+                case 5:
+                    day = "Friday";
+                    break;
+                case 6:
+                    day = "Saturday";
+                    break;
+                default:
+                    day = "Unknown"
         }
         document.getElementById('day').innerHTML = "Today is " + day;
-            
+
+        function myFunction() {
+            let phone;
+            const message = document.getElementById('phone');
+            let x = document.getElementById('tel').value;
+
+            if (isNaN(x)) {
+                phone = "Input is not a number";
+            } else if (x.length !== 10) {
+                phone = "Number is Invalid";
+            } else {
+                phone = "Valid";
+            }
+
+            document.getElementById('phone').innerHTML = phone;
+    }    
+
+
+    setInterval(myFunction, 1000);
+
+    function myFunction(){
+        let d = new Date();
+        document.getElementById('inter').innerHTML = 
+        d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+    }
 
     
 
